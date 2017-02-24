@@ -1,10 +1,40 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8" />
-		<title></title>
+		<meta charset="UTF-8">
+		<title>自定义checkbox， radio样式</title>
+		<link rel="stylesheet" href="css/class1.css">
 	</head>
 	<body>
-		
+		<div class="mainBlock">
+			<div class="checkbox-bgimg">					<!--背景图实现-->
+				<h5>喜欢吃的东西</h5>
+				<input type="checkbox" id="checkbox1">
+				<label for="checkbox1"></label><i>水果</i>&nbsp;&nbsp;&nbsp;
+				<input type="checkbox" id="checkbox2">
+				<label for="checkbox2"></label><i>蔬菜</i>
+			</div>
+			<div class="checkbox-vclass">					<!--伪元素实现-->
+				<h5>喜欢的游戏</h5>
+				<input type="checkbox" id="checkbox3">
+				<label for="checkbox3"></label><i>狼人杀</i>&nbsp;&nbsp;&nbsp;
+				<input type="checkbox" id="checkbox4">
+				<label for="checkbox4"></label><i>你画我猜</i>
+			</div>
+			<div class="radio-bgimg">						<!--背景图实现-->
+				<h5>性别</h5>
+				<input name="bgimg" type="radio" id="radio1">
+				<label for="radio1"></label><i>男</i>&nbsp;&nbsp;&nbsp;
+				<input name="bgimg" type="radio" id="radio2">
+				<label for="radio2"></label><i>女</i>
+			</div>
+			<div class="radio-vclass">						<!--伪元素实现-->
+				<h5>职业</h5>
+				<input name="vclass" type="radio" id="radio3">
+				<label for="radio3"></label><i>学生</i>&nbsp;&nbsp;&nbsp;
+				<input name="vclass" type="radio" id="radio4">
+				<label for="radio4"></label><i>教师</i>
+			</div>
+		</div>
 	</body>
 </html>

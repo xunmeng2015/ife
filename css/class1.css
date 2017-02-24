@@ -1,11 +1,13 @@
-body{
-				background-color: lightgray;
+			body{
+				background-color: white;
 			}
 			.mainBlock{
-				background-color: mintcream;
-				width: 400px;
-				height: 250px;
-				margin: 150px auto;
+				width: 500px;
+				height: auto;
+				margin: 0 auto;
+				border: solid 1px black;
+				text-align: center;
+				padding-bottom: 10px;
 			}
 			/*checkbox背景图片*/
 			.checkbox-bgimg input[type="checkbox"]{
@@ -17,7 +19,6 @@ body{
 				background-position: -25px -32px;
 				display: inline-table;
 				height: 15px;
-				margin: 20px;
 				width: 15px;
 			}
 			.checkbox-bgimg input[type="checkbox"]:checked + label{		/*相邻选择符*/
@@ -33,7 +34,6 @@ body{
 				background-position: -24px -10px;
 				display: inline-block;
 				height: 17px;
-				margin: 20px;
 				width: 17px;
 			}
 			.radio-bgimg input[type="radio"]:checked + label{
@@ -47,7 +47,6 @@ body{
 				width: 13px;
 				height: 13px;
 				border: 1px solid #d9d9d9;
-				margin: 20px;
 				display: inline-block;
 				cursor: pointer;
 			}
@@ -61,8 +60,8 @@ body{
 				height: 8px;
 				background-color: #d73e32;
 				transform: rotate(45deg);
-				left: 6px;
-				top: 3px;
+				left: 7px;
+				top: 2px;
 				position: absolute;
 			}
 			.checkbox-vclass input[type="checkbox"]:checked+label::after{
@@ -72,7 +71,7 @@ body{
 				background-color: #d73e32;
 				transform: rotate(135deg);
 				left: 3px;
-				top: 6px;
+				top: 5px;
 				position: absolute;
 			}
 			/*radio伪元素实现*/
@@ -83,7 +82,6 @@ body{
 				display: inline-block;
 				width: 15px;
 				height: 15px;
-				margin: 20px;
 				border: 1px solid #d9d9d9;
 				border-radius: 13px;
 				cursor: pointer;
@@ -101,5 +99,5 @@ body{
 				width: 6px;
 				height: 6px;
 				background-color: #d73e33;
-				border-radius: 50%;
+				border-radius: 15px;
 			}

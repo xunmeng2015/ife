@@ -1,0 +1,78 @@
+			body{
+				background-color: white;
+			}
+			.mainBlock{
+				width: 400px;
+				height: auto;
+				margin: 150px auto;
+				border: solid 1px black;
+				text-align: center;
+				padding-bottom: 10px;
+			}
+			
+			/*checkbox背景图片*/
+			.checkbox-bgimg input[type="checkbox"]{
+				display: none;
+			}
+			.checkbox-bgimg label{
+				cursor: pointer;
+				background: url(../img/99322cf8c3283e42.png);
+				background-position: -25px -32px;
+				display: inline-table;
+				height: 15px;
+				width: 15px;
+			}
+			.checkbox-bgimg input[type="checkbox"]:checked + label{		/*相邻选择符*/
+				background-position: -60px -32px;	
+			}
+			
+			/*radio背景图片*/
+			.radio-bgimg input[type="radio"]{
+				display: none;
+			}
+			.radio-bgimg label{
+				cursor: pointer;
+				background: url(../img/99322cf8c3283e42.png);
+				background-position: -24px -10px;
+				display: inline-block;
+				height: 17px;
+				width: 17px;
+			}
+			.radio-bgimg input[type="radio"]:checked + label{
+				background-position: -59px -10px;	
+			}
+			
+			/*checkbox伪元素*/
+			.checkbox-vclass input[type="checkbox"]{
+				display: none;
+			}
+			.checkbox-vclass input[type="checkbox"] + label::before{
+			    content: "";
+			    background: url(../img/99322cf8c3283e42.png);
+				background-position: -25px -32px;
+				display: inline-block;
+				height: 16px;
+				width: 15px;
+				cursor: pointer;
+			}
+			.checkbox-vclass input[type="checkbox"]:checked + label::before{
+			    content: "";
+				background-position: -60px -32px;		
+			}
+
+			/*radio伪元素实现*/
+			.radio-vclass input[type="radio"]{
+				display: none;
+			}
+			.radio-vclass input[type="radio"] + label::before{
+			    content: "";
+			    background: url(../img/99322cf8c3283e42.png) no-repeat -24px -10px;
+				display: inline-block;
+				height: 16px;
+				width: 16px;
+				cursor: pointer;
+			}
+			.radio-vclass input[type="radio"]:checked + label::before{
+			    content: "";
+				background-position: -59px -10px;		
+			}

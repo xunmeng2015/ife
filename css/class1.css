@@ -1,0 +1,105 @@
+body{
+				background-color: lightgray;
+			}
+			.mainBlock{
+				background-color: mintcream;
+				width: 400px;
+				height: 250px;
+				margin: 150px auto;
+			}
+			/*checkbox背景图片*/
+			.checkbox-bgimg input[type="checkbox"]{
+				display: none;
+			}
+			.checkbox-bgimg label{
+				cursor: pointer;
+				background: url(../img/99322cf8c3283e42.png);
+				background-position: -25px -32px;
+				display: inline-table;
+				height: 15px;
+				margin: 20px;
+				width: 15px;
+			}
+			.checkbox-bgimg input[type="checkbox"]:checked + label{		/*相邻选择符*/
+				background-position: -60px -32px;	
+			}
+			/*radio背景图片*/
+			.radio-bgimg input[type="radio"]{
+				display: none;
+			}
+			.radio-bgimg label{
+				cursor: pointer;
+				background: url(../img/99322cf8c3283e42.png);
+				background-position: -24px -10px;
+				display: inline-block;
+				height: 17px;
+				margin: 20px;
+				width: 17px;
+			}
+			.radio-bgimg input[type="radio"]:checked + label{
+				background-position: -59px -10px;	
+			}
+			/*checkbox伪元素*/
+			.checkbox-vclass input[type="checkbox"]{
+				display: none;
+			}
+			.checkbox-vclass label{
+				width: 13px;
+				height: 13px;
+				border: 1px solid #d9d9d9;
+				margin: 20px;
+				display: inline-block;
+				cursor: pointer;
+			}
+			.checkbox-vclass input[type="checkbox"]:checked+label{
+				border-color: #d73e33;
+				position: relative;
+			}
+			.checkbox-vclass input[type="checkbox"]:checked+label::before{
+				content: '\00a0';
+				width: 2px;
+				height: 8px;
+				background-color: #d73e32;
+				transform: rotate(45deg);
+				left: 6px;
+				top: 3px;
+				position: absolute;
+			}
+			.checkbox-vclass input[type="checkbox"]:checked+label::after{
+				content: '\00a0';
+				width: 2px;
+				height: 4px;
+				background-color: #d73e32;
+				transform: rotate(135deg);
+				left: 3px;
+				top: 6px;
+				position: absolute;
+			}
+			/*radio伪元素实现*/
+			.radio-vclass input[type="radio"]{
+				display: none;
+			}
+			.radio-vclass label{
+				display: inline-block;
+				width: 15px;
+				height: 15px;
+				margin: 20px;
+				border: 1px solid #d9d9d9;
+				border-radius: 13px;
+				cursor: pointer;
+			}
+			.radio-vclass input[type="radio"]:checked+label{
+				border-color: #d73e33;
+				position: relative;
+			}
+			.radio-vclass input[type="radio"]:checked+label::after{
+				content: '';
+				position: absolute;
+				left: 4px;
+				top: 4px;
+				display: inline-block;
+				width: 6px;
+				height: 6px;
+				background-color: #d73e33;
+				border-radius: 50%;
+			}

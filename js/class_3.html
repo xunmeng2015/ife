@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>正则表达式之入门</title>
+		<style type="text/css">
+			i{
+				display: none;
+				margin-right: 10px;
+				margin-left: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<label>输入手机号码：</label><input type="text"id="phone"><i id="yesp">输入正确</i><i id="nop">输入错误，请重新输入</i>
+		<button id="phone-btn" onclick="checkphone()">提交</button><br /><br />
+		<label>输入英文字符串：</label><input type="text" id="letter"><i id="yesl">输入正确</i><i id="nol">输入错误，请重新输入</i>
+		<button id="letter-btn" onclick="checkletter()">提交</button>
+	</body>
+	<script type="text/javascript">
+		function checkphone(){
+			var phone = document.getElementById("phone").value;
+			var reg = new RegExp("\\b1[3458]{1}\\d{9}\\b","");
+			if(reg.test(phone)){
+				document.getElementById("yesp").style.display = "inline";
+				document.getElementById("nop").style.display = "none";
+			}
+			else if(phone != "" && !reg.test(phone)){
+				document.getElementById("nop").style.display = "inline";
+				document.getElementById("yesp").style.display = "none";
+			}
+		}
+		function checkletter(){
+			var letter = document.getElementById("letter").value;
+			var reg1 = new RegExp("(\\w+)\\s+\\1", "");
+			if(reg1.test(letter)){
+				document.getElementById("yesl").style.display = "inline";
+				document.getElementById("nol").style.display = "none";
+			}
+			else if(letter != "" && !reg1.test(letter)){
+				document.getElementById("nol").style.display = "inline";
+				document.getElementById("yesl").style.display = "none";
+			}
+		}
+	</script>
+</html>

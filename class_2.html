@@ -6,10 +6,10 @@
 		<style type="text/css">
 			.text {
 				background-color: darkgray;
-				/*width: 300px;*/
 				padding: 5px;
 				border-radius: 5px;
 				margin: 0 auto;
+				height: 1000px;
 			}
 			.menu{
 				display: none;
@@ -70,11 +70,6 @@
 					    }
 					return false;
 				};
-				
-				document.getElementsByTagName("a").onclick = function(){
-					alert("demo");
-				};
-				
 				document.onclick = function(){
 					document.getElementById("menu").style.display = "none";
 				};
@@ -89,7 +84,7 @@
 			       	}
 				};
 				
-				document.getElementById("menu").oncontextmenu = function(){
+				document.oncontextmenu = function(){
 					return false;
 				};
 			})();

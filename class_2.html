@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>自定义网页右键菜单</title>
+		<style type="text/css">
+			.text {
+				background-color: darkgray;
+				/*width: 300px;*/
+				padding: 5px;
+				border-radius: 5px;
+				margin: 0 auto;
+			}
+			.menu{
+				display: none;
+				height: 80px;
+				width: 200px;
+				border: solid 1px gainsboro;
+				position: absolute;
+				z-index: 100;
+				background-color: white;
+			}
+			.menu a{
+				display: block;
+				margin: 10px;
+				text-decoration: none;
+			}
+			.menu p:hover{
+				background-color: blanchedalmond;
+			}
+		</style>
+	</head>
+	<body>
+		<p class="text" id="text">right click to show the menu</p>
+		<div class="menu" id="menu">
+			<p class="menutext">Menu Item 1</p>
+			<p class="menutext">Menu Item 2</p>
+		</div>
+		<script type="text/javascript">
+			(function(){
+				var menu = document.getElementById("menu");
+				var ptext = document.getElementsByClassName("menutext");
+				for(var i = 0; i < ptext.length; i++){
+					ptext[i].onclick = function(){
+						alert(this.innerText);
+					}
+				};
+				document.getElementById("text").oncontextmenu = function(e){
+					var x = window.innerWidth - e.clientX;
+					var y = window.innerHeight - e.clientY;
+					e.defaultPrevented;    /*取消事件的默认动作*/
+					document.getElementById("menu").style.display = "block";
+					if(x < 200){
+						if(y < 80){
+							menu.style.right = x + 'px';
+							menu.style.bottom = y + 'px';
+						}
+						else{
+							menu.style.right = x + 'px';
+							menu.style.bottom = y - 80 + 'px';
+						}
+					}
+					else if(y < 80){
+							menu.style.right = x - 200 + 'px';
+      					 	menu.style.bottom = y + 'px';
+					}
+					 else {
+					        menu.style.right = x - 200 + 'px';
+					        menu.style.bottom = y - 80 + 'px';
+					    }
+					return false;
+				};
+				
+				document.getElementsByTagName("a").onclick = function(){
+					alert("demo");
+				};
+				
+				document.onclick = function(){
+					document.getElementById("menu").style.display = "none";
+				};
+				
+				document.getElementById("menu").onclick = function(ev){			/*阻止事件冒泡*/
+					ev = ev|| window.event;
+					if(ev.stopPropagation){
+			            ev.stopPropagation();
+			         }
+			        else if(window.event){
+			            window.event.cancelBubble = true;						/*兼容IE*/
+			       	}
+				};
+				
+				document.getElementById("menu").oncontextmenu = function(){
+					return false;
+				};
+			})();
+		</script>
+	</body>
+</html>

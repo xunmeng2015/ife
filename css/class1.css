@@ -3,8 +3,13 @@
 			}
 			.mainBlock{
 				width: 500px;
-				height: auto;
-				margin: 0 auto;
+				height: 400px;
+				position: absolute;
+				/*margin: 0 auto;*/
+				top: 50%;
+				left: 50%;
+				margin-top: -200px;
+				margin-left: -250px;
 				border: solid 1px black;
 				text-align: center;
 				padding-bottom: 10px;

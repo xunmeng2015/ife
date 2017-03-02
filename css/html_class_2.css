@@ -1,0 +1,114 @@
+body{
+	background-color: black;
+}
+.box{						/*最外层div*/
+	width: 85%;
+	margin: 0 auto;
+	background-color: darkgray;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.menu{						/*导航栏*/
+	height: 60px;
+	background-color: gray;
+	width: 100%;
+}		
+.menu img{
+	margin-left: 30px;
+	height: 60px;
+	width: 150px;
+}
+.menu ul{
+	display: inline;
+}
+.menu ul li{
+	position: relative;
+	float: right;
+	margin-right: 20px;
+	margin-top: 20px;
+}
+.menu ul li a{
+		color: white;
+		text-decoration: none;
+}
+.title_2{					/*第二标题*/
+	font-size: 14px;
+	color: darkgray;
+}
+.author{					/*作者*/
+	font-size: 12px;
+	color: darkgray;
+}
+.block1, .block2, .block3, .block4, .block5{	/*每部分内容外部div*/
+	margin-top: 20px;	
+	border: solid 1px lightgray;
+	padding: 10px;
+	box-shadow: 1px 1px 5px;
+	background-color: white;
+	
+}
+div .block3 h1 ~ div p + img{					/*内部img*/
+	width: 100px;
+	height: 70px;
+	position: relative;
+	/*margin: 0 auto;*/
+	left: 50%;
+	margin-left: -50px;
+}
+div .block3 div{
+	width: 150px;
+	height: 150px;
+	border: solid 1px darkgray;
+	margin-left: 80px;
+	margin-bottom: 10px;
+}
+div .block3 div p{
+	text-align: center;
+	font-size: 14px;
+}
+div .block4 table{
+	width: 96%;
+	margin: 0 auto;
+}
+div .block4 th{
+	background-color: black;
+	color: white;
+	text-align: left;
+}
+div .block4 table tr:last-child{
+	background-color: gray;
+}
+div .block4 td{
+	border: solid 1px gainsboro;
+	border-bottom: 0px;
+}
+div .block4 td:nth-child(2n){
+	border-left: 0px;
+	border-right: 0px;
+}
+.title_1{
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	font-weight: bold;
+	border-left: solid 5px gainsboro;
+	padding-left: 10px;
+	margin-left: 10px;
+}
+input[type='submit']{
+	width: 96%;
+	height: 30px;
+	position: relative;
+	left: 50%;
+	margin-left: -48%;
+	border-radius: 5px;
+	border: none;
+	background-color: blue;
+	color: white;
+}
+.left{
+	position: relative;
+	margin-left: 10%;
+	text-align: left;
+}

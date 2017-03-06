@@ -2,18 +2,15 @@ body{
 	background-color: black;
 }
 .box{						/*最外层div*/
-	width: 85%;
+	width: 86%;
 	margin: 0 auto;
 	background-color: darkgray;
-	padding-left: 20px;
-	padding-right: 20px;
 }
-
 .menu{						/*导航栏*/
 	height: 60px;
 	background-color: gray;
 	width: 100%;
-}		
+}
 .menu img{
 	margin-left: 30px;
 	height: 60px;
@@ -40,27 +37,41 @@ body{
 	font-size: 12px;
 	color: darkgray;
 }
+.left{
+	margin-right: 440px;
+}
+.right{
+	position: absolute;
+ 	right:8%; 
+  	top:70px;
+	width: 400px;
+}
+.block1, .block2, .block3, .block4{
+	margin-left: 20px;
+}
+.block5{
+	margin-right: 20px;
+}
 .block1, .block2, .block3, .block4, .block5{	/*每部分内容外部div*/
 	margin-top: 20px;	
 	border: solid 1px lightgray;
 	padding: 10px;
 	box-shadow: 1px 1px 5px;
 	background-color: white;
-	
+	clear: both;
 }
-div .block3 h1 ~ div p + img{					/*内部img*/
+.block3 h1 ~ div p + img{					/*内部img*/
 	width: 100px;
 	height: 70px;
 	position: relative;
-	/*margin: 0 auto;*/
 	left: 50%;
 	margin-left: -50px;
 }
 div .block3 div{
-	width: 150px;
-	height: 150px;
+	width: 120px;
+	height: 120px;
 	border: solid 1px darkgray;
-	margin-left: 80px;
+	margin-left: 40px;
 	margin-bottom: 10px;
 }
 div .block3 div p{
@@ -109,7 +120,7 @@ input[type='submit']{
 }
 .tab{
 	margin: 0 auto;
-}
+}	
 .tit{
 	color: darkgray;
 	font-size: 13px;
@@ -118,13 +129,24 @@ input[type='submit']{
 }
 .name{
 	padding-right: 5px;
+	text-align: left;
 }
 .block5 td{
 	padding-bottom: 5px;
 }
-.left{
+.block3{
+	overflow: hidden;
+}
+.block3 div{
 	float: left;
 }
-.right{
-	float: right;
+.clear{
+	clear: both;
+}
+.footer{
+	clear: both;
+	text-align: center;
+	background-color: black;
+	color: white;
+	padding-top: 10px;
 }

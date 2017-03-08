@@ -52,7 +52,7 @@
 				}else{
 					alert("请输入数字");
 				}
-			};
+			}
 			btn2.onclick = function(){
 				value = document.getElementById("input").value;
 				if(value != "" && new RegExp("^[0-9]*$").test(value)){
@@ -75,8 +75,27 @@
 				if(arr.length <= 0){
 					alert("请先插入一些数据");
 				}else{
-					var firstValue = queue.firstChild.innerHTML;
+					var firstValue = arr[0].textContent;
+					queue.removeChild(arr[0]);
 					alert(firstValue);
+				}
+			}
+			btn4.onclick = function(){
+				var arr = document.getElementsByTagName("p");
+				if(arr.length <= 0){
+					alert("请先插入一些数据");
+				}else{
+					var lastValue = arr[arr.length - 1].textContent;
+					queue.removeChild(arr[arr.length - 1]);
+					alert(lastValue);
+				}
+			}
+			var p_arr = document.getElementsByTagName("p");
+			for (var i = 0; i < p_arr.length; i++){
+				p_arr[i].onclick = function(){
+					var value = this.textContent;
+					queue.removeChild(this);
+					alert(value);
 				}
 			}
 		</script>

@@ -52,10 +52,10 @@ return data;
  * 返回一个排序后的数组
  */
 function sortAqiData(data) {
-	var result = data.sort(function(data1, data2){
-		return data2.split("：")[1] - data1.split("：")[1];
+	 data.sort(function(data1, data2){
+		return data1.split("：")[1] - data2.split("：")[1];
 	});
-	return result;
+	return data;
 }
 
 /**
